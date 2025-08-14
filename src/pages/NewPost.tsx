@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
+import { SaveButton } from '../components/SaveButton'
 import './NewPost.css'
 
 export function NewPost() {
@@ -29,7 +30,7 @@ export function NewPost() {
         <textarea placeholder="Content" value={content} onChange={e => setContent(e.target.value)} rows={10} required />
         {error && <p className="error">{error}</p>}
         {message && <p className="success">{message}</p>}
-        <button type="submit">Publish</button>
+        <SaveButton type="submit" />
       </form>
     </div>
   )

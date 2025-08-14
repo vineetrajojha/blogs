@@ -1,15 +1,77 @@
 .hero {
-  background: var(--surface);
-  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--surface), #fff);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
 }
-.hero-inner { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-.eyebrow { color: var(--muted); letter-spacing: 0.15em; font-weight: 600; }
-.sub { max-width: 860px; }
 
-h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-inner { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow { 
+  color: var(--accent); 
+  letter-spacing: 0.15em; 
+  font-weight: 600; 
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sub { 
+  max-width: 600px; 
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1 { 
+  font-size: 3.5rem; 
+  letter-spacing: -0.03em; 
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--text), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
 
 @media (min-width: 900px) {
-  .hero { padding: 6rem 0; }
-  h1 { font-size: 3rem; }
+  .hero { padding: 8rem 0; }
+  h1 { font-size: 4.5rem; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 5rem 0; }
+  h1 { font-size: 2.75rem; }
+  .sub { font-size: 1rem; }
 }
 

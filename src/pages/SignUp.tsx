@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import bg from '../assets/placeholder.png'
+import { Button } from '../components/Button'
 import './Auth.css'
 
 export function SignUp() {
@@ -36,7 +37,12 @@ export function SignUp() {
             <input type="password" placeholder="Votre mot de passe" value={password} onChange={e => setPassword(e.target.value)} required />
             {error && <p className="error">{error}</p>}
             {message && <p className="success">{message}</p>}
-            <button className="auth-button" type="submit">Créer le compte</button>
+            <Button className="auth-button" type="submit">
+              Créer le compte
+              <svg className="svg" viewBox="0 0 512 512">
+                <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>
+              </svg>
+            </Button>
           </form>
           <p className="auth-help">Besoin d'aide? <a href="mailto:support@bonsante.com">support@bonsante.com</a></p>
         </div>

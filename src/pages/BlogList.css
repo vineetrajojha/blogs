@@ -1,3 +1,31 @@
-.blog-list { padding: 2rem 0; }
-.blog-list .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.blog-list { padding: 4rem 0; }
+.blog-list h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.blog-list h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.blog-list .grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 2rem; 
+}
+
+@media (max-width: 768px) {
+  .blog-list { padding: 3rem 0; }
+  .blog-list .grid { gap: 1.5rem; }
+}
 

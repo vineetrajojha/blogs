@@ -1,6 +1,106 @@
-.new-post { padding: 2rem 0; }
-.new-post .form { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; max-width: 720px; }
-.new-post textarea { width: 100%; padding: 0.625rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.75rem; font-size: 1rem; }
-.new-post input { width: 100%; padding: 0.625rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.75rem; font-size: 1rem; }
-.new-post button { width: 100%; padding: 0.75rem 1rem; border-radius: 10px; background: var(--text); color: #fff; border: none; font-weight: 600; }
+.new-post { padding: 4rem 0; }
+
+.new-post h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.new-post h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.new-post .form { 
+  background: #fff; 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 2rem; 
+  max-width: 720px; 
+  box-shadow: var(--card-shadow);
+}
+
+.new-post textarea { 
+  width: 100%; 
+  padding: 0.75rem 1rem; 
+  border: 1px solid var(--border); 
+  border-radius: 12px; 
+  margin-bottom: 1.25rem; 
+  font-size: 1rem; 
+  transition: all 0.2s ease;
+  min-height: 150px;
+  font-family: inherit;
+}
+
+.new-post input { 
+  width: 100%; 
+  padding: 0.75rem 1rem; 
+  border: 1px solid var(--border); 
+  border-radius: 12px; 
+  margin-bottom: 1.25rem; 
+  font-size: 1rem; 
+  transition: all 0.2s ease;
+}
+
+.new-post textarea:focus,
+.new-post input:focus { 
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.new-post .Btn { 
+  width: 100% !important; 
+  min-width: 100% !important;
+  padding: 0.875rem 1.25rem; 
+  border-radius: 12px; 
+  background-color: rgb(168, 38, 255) !important; 
+  color: #fff; 
+  border: none; 
+  font-weight: 600; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px rgb(140, 32, 212) !important;
+  justify-content: center !important;
+}
+
+.new-post .Btn:hover {
+  color: transparent;
+  transform: translateY(-1px);
+}
+
+.new-post .Btn:active {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 2px 2px 0px rgb(140, 32, 212) !important;
+}
+
+.new-post .Btn .svg {
+  width: 16px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.new-post .Btn:hover .svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+@media (max-width: 768px) {
+  .new-post { padding: 3rem 0; }
+  .new-post .form { padding: 1.5rem; }
+}
 
