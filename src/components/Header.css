@@ -1,0 +1,14 @@
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.site-header .container {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+

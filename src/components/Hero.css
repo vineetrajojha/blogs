@@ -1,0 +1,15 @@
+.hero {
+  background: var(--surface);
+  padding: 4rem 0;
+}
+.hero-inner { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.eyebrow { color: var(--muted); letter-spacing: 0.15em; font-weight: 600; }
+.sub { max-width: 860px; }
+
+h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+
+@media (min-width: 900px) {
+  .hero { padding: 6rem 0; }
+  h1 { font-size: 3rem; }
+}
+

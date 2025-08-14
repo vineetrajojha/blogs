@@ -1,0 +1,14 @@
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; align-items: center; }
+.nav-links a { color: var(--text); padding: 0.375rem 0.5rem; border-radius: 6px; }
+.nav-links a.active { background: var(--surface); }
+.nav-links .accent a, .nav-links .accent a.active { background: var(--text); color: #fff; }
+
